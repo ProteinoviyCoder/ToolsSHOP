@@ -1,0 +1,19 @@
+.logo {
+  width: 75px;
+  height: 75px;
+  cursor: pointer;
+  transition: 0.5s ease;
+  border-radius: 200px;
+
+  transform: rotate(360deg);
+}
+
+.logo:hover {
+  border: 1px solid rgb(42, 113, 253);
+  border-radius: 200px;
+}
+
+.logo-rotate {
+  transform: rotate(0deg);
+  transition: 0.3s ease;
+}

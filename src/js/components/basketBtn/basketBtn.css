@@ -1,0 +1,23 @@
+.basket-btn {
+  border-radius: 10px;
+  width: 70px;
+  height: 50px;
+  align-self: center;
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+  text-align: center;
+  transition: 0.1s ease;
+}
+
+.basket-btn:hover {
+  box-shadow: 0 0 5px 5px rgb(42, 113, 253);
+}
+
+.basket-btn:active {
+  box-shadow: 0 0 5px 5px rgb(165, 168, 153);
+}
+
+.img-basket-btn {
+  width: 50px;
+}

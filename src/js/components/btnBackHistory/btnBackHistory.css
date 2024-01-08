@@ -1,0 +1,18 @@
+.btn-back-history {
+  background-color: transparent;
+  border: none;
+  box-shadow: 0 0 5px 5px rgba(136, 135, 135, 0.3);
+  background-color: rgb(255, 255, 255);
+  cursor: pointer;
+  border-radius: 100px;
+  min-width: 30px;
+  padding: 5px 7px;
+}
+
+.btn-back-history:hover {
+  box-shadow: 0 0 5px 5px rgba(101, 149, 244, 0.5);
+}
+
+.btn-back__string-left {
+  width: 35px;
+}

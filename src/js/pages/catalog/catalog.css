@@ -1,0 +1,17 @@
+.div-for__title__product-list {
+  width: 100%;
+}
+
+.div-search-main-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.catalog__search {
+  width: 80%;
+}
+
+.catalog__none {
+  display: none !important;
+}
