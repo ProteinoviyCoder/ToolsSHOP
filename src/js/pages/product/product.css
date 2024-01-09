@@ -69,3 +69,43 @@
 .product__price {
   font-size: 44px;
 }
+
+@media (max-width: 1000px) {
+  .content-slider-title-cost {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .product__btn-back {
+    left: 30px;
+  }
+  .product__slider {
+    width: 100% !important;
+    margin-bottom: 30px;
+  }
+  .product__content-title-cost {
+    width: 100%;
+    text-align: center;
+    gap: 10px;
+  }
+  .product__main-title {
+    font-size: 28px;
+    width: 100% !important;
+    margin: 0;
+    padding: 0 !important;
+  }
+  .desc__string {
+    display: flex;
+    flex-direction: column;
+    align-items: center !important;
+    margin: 0;
+    padding: 0;
+    gap: 0 !important;
+  }
+}
+
+@media (max-width: 350px) {
+  .product__button-order {
+    padding: 20px 15px;
+  }
+}

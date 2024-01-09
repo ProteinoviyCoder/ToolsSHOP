@@ -201,6 +201,12 @@ template, [hidden] {
   display: flex;
 }
 
+@media (width <= 1000px) {
+  .link1 {
+    display: none !important;
+  }
+}
+
 .navigation-link {
   color: #2a2a2a;
   background-color: #0000;
@@ -225,6 +231,12 @@ template, [hidden] {
 .navigation-link:active {
   color: #fff;
   background-color: #0e4ac2;
+}
+
+@media (width <= 1000px) {
+  .navigation-link {
+    padding: 15px 30px;
+  }
 }
 
 .logo {

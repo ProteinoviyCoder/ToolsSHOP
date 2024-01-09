@@ -51,6 +51,7 @@
   .slider {
     display: flex;
     justify-content: center;
+    min-height: 300px;
   }
   .slider__image {
     height: 300px;
@@ -59,6 +60,7 @@
   }
   .slider__button-right,
   .slider__button-left {
+    margin: 0;
     height: 65px;
     align-self: center;
   }
@@ -69,5 +71,18 @@
   .slider__button-right {
     padding: 0 10px 0 0px;
     margin-left: 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  .slider {
+    display: flex;
+    justify-content: center;
+    min-height: 200px;
+  }
+  .slider__image {
+    height: 200px;
+    border-radius: 10px;
+    width: 300px;
   }
 }

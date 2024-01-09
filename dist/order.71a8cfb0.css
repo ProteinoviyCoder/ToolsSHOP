@@ -120,6 +120,16 @@ input[type="number"]::-webkit-outer-spin-button {
   box-shadow: 0 0 5px 5px #2a71fd;
 }
 
+.text-info {
+  text-align: center;
+  color: #fff;
+  background-color: gray;
+  border-radius: 15px;
+  padding: 7px;
+  font-weight: 700;
+  box-shadow: 0 0 5px 5px #000000b3;
+}
+
 .disable {
   color: #fff;
   background-color: #4f4f4f;
@@ -130,6 +140,34 @@ input[type="number"]::-webkit-outer-spin-button {
   cursor: default;
   background-color: #4f4f4f;
   box-shadow: 0 0 5px 5px #4f4f4f00;
+}
+
+@media (width <= 1000px) {
+  .order__img-form-block {
+    width: 380px;
+    position: relative;
+  }
+}
+
+@media (width <= 390px) {
+  .order__img-form-block {
+    width: 340px;
+    position: relative;
+  }
+}
+
+@media (width <= 345px) {
+  .order__img-form-block {
+    width: 310px;
+    position: relative;
+  }
+}
+
+@media (width <= 315px) {
+  .order__img-form-block {
+    width: 260px;
+    position: relative;
+  }
 }
 
 /*# sourceMappingURL=order.71a8cfb0.css.map */

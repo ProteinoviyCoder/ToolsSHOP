@@ -118,9 +118,7 @@ export function getBasketPage() {
 
     basketRules.append(rule);
   }
-  createRuleOfBasket(
-    `Заказ можно забронировать и забрать самовывозом по адресу "Варшавское шоссе 145 к7" с оплатой на месте.`
-  );
+  createRuleOfBasket(`Заказ можно забронировать и забрать самовывозом.`);
   createRuleOfBasket(
     `Мы можем отправить Вам заказ транспортными компаниями (СДЭК, ПЭК, Деловые линии), только по полной предоплате.`
   );
@@ -129,8 +127,10 @@ export function getBasketPage() {
   );
   createRuleOfBasket(
     `Также Вы можете заказать интересующие Вас товары через наш 
-    <a class="basket__link" target="_blank" href="https://www.ozon.ru/seller/apara-1009443/products/?miniapp=seller_1009443">Ozon</a>,
-    <a class="basket__link" target="_blank" href="https://megamarket.ru/shop/tvoy-instrument/">Сбер Мега Маркет</a>`
+    <a class="basket__link" target="_blank" href="https://www.ozon.ru/"> Ozon </a>,
+    <a class="basket__link" target="_blank" href="https://megamarket.ru/"> Сбер Мега Маркет </a>
+    <a class="basket__link" target="_blank" href="https://www.avito.ru/"> Авито </a>
+    <a class="basket__link" target="_blank" href="https://market.yandex.ru/"> Я.Маркет </a>`
   );
 
   // Ссылка оформления заказа

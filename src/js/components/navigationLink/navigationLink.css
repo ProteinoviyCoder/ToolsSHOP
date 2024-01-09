@@ -24,3 +24,9 @@
   color: white;
   background-color: rgb(14, 74, 194);
 }
+
+@media (max-width: 1000px) {
+  .navigation-link {
+    padding: 15px 30px;
+  }
+}

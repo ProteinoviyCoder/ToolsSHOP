@@ -598,28 +598,6 @@ function getOrderPage() {
     imgForm.src = (0, _noPhotoPngDefault.default);
     const formOrder = document.createElement("form");
     formOrder.classList.add("order__form-order");
-    formOrder.addEventListener("submit", async function(event) {
-        event.preventDefault();
-        const products = formOrder.querySelectorAll(".order__product");
-        let productString;
-        for (let i of products)productString += `${i.textContent} \n`;
-        if (inputName.value != "" || inputPhone.value != "") {
-            const url = new URL("http://localhost:3700/telega");
-            const sendMsg = await fetch(url, {
-                method: "POST",
-                headers: {
-                    "Content-Type": "application/json"
-                },
-                body: JSON.stringify({
-                    name: inputName.value.toString(),
-                    phone: inputPhone.value.toString(),
-                    products: productString
-                })
-            });
-            if (!sendMsg.status == 200) console.log(sendMsg);
-        }
-    // console.log(JSON.stringify(inputName.value));
-    });
     //div для inputName и его имени
     const contentInputName = document.createElement("div");
     contentInputName.classList.add("order__content-input");
@@ -695,7 +673,10 @@ function getOrderPage() {
         submit.disabled = false;
         submit.classList.remove("disable");
     }
-    formOrder.append(contentInputName, contentInputPhone, placeProducts, submit);
+    const textInfo = document.createElement("p");
+    textInfo.classList.add("text-info");
+    textInfo.textContent = "\u042D\u0442\u043E \u043E\u0431\u0440\u0430\u0437\u0435\u0446 \u0444\u043E\u0440\u043C\u044B, \u0432\u0430\u0448\u0438 \u0434\u0430\u043D\u043D\u044B\u0435 \u043D\u0435 \u0441\u043E\u0431\u0438\u0440\u0430\u044E\u0442\u0441\u044F \u0438 \u043D\u0435 \u0441\u043E\u0445\u0440\u0430\u043D\u044F\u044E\u0442\u0441\u044F";
+    formOrder.append(contentInputName, contentInputPhone, placeProducts, submit, textInfo);
     imgFormBlock.append(btnBack, imgForm, formOrder);
     contentForm.append(imgFormBlock);
     page.append(contentForm);

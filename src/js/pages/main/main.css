@@ -192,6 +192,11 @@
   align-items: center;
 }
 
+.div-star {
+  display: flex;
+  align-items: center;
+}
+
 .main__teitle-feedback {
   margin-right: 10px;
   font-size: 20px;
@@ -234,7 +239,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 100px;
+  gap: 70px;
 }
 
 .main__item-marketplace {
@@ -242,8 +247,8 @@
   transition: 0.1s ease;
   box-shadow: 0 0 5px 5px rgba(1, 1, 1, 0.2);
   border-radius: 10px;
-  width: 400px;
-  height: 220px;
+  width: 350px;
+  height: 200px;
 }
 .main__item-marketplace:hover {
   transition: 0.1s ease;
@@ -287,6 +292,12 @@
 .main__img-address {
   width: 450px;
   border-radius: 10px;
+  border: 5px solid transparent;
+  cursor: pointer;
+}
+
+.main__img-address:hover {
+  border: 5px solid rgb(42, 113, 253) !important;
 }
 
 /* -------------------------БЛОК №6 ЧАСТЫЕ ВОПРОСЫ-------------------------- */
@@ -392,4 +403,86 @@
 /* дисплей none для main страницы */
 .main__none {
   display: none;
+}
+
+@media (max-width: 1000px) {
+  .main__container-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .main__content-slider-desc {
+    display: none !important;
+  }
+  .main__img-hands {
+    transform: translate(0);
+  }
+  .main__list__about-team {
+    margin-right: 0px;
+    padding: 5px 5px 5px 0px;
+    padding-left: 25px;
+  }
+  .main__stars-title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .main__list-marketplace {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 0;
+    margin: 0;
+  }
+  .main__item-marketplace {
+    width: 250px;
+    height: 150px;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+  .main__content-addres {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .main__content6 {
+    margin-top: 20px;
+  }
+  .main__title-and-desc {
+    width: 90%;
+  }
+  .main__title {
+    width: 100%;
+    font-size: 24px;
+    transform: translate(0, -20px);
+    padding: 0;
+    margin: 0;
+  }
+  .main__desc {
+    font-size: 14px !important;
+    padding: 0 5px 5px 5px;
+  }
+  .main__content2 {
+    margin-top: 50px;
+  }
+  .main__semi-title,
+  .main__title-marketplace,
+  .main__title-questions {
+    font-size: 20px !important;
+    margin-bottom: 5px;
+  }
+  .main__item__about-team {
+    font-size: 18px;
+  }
+  .main-elements-right,
+  .main-elements-left {
+    transform: translate(0) !important;
+  }
+  .main__content4 {
+    padding: 0;
+  }
+  .main__name-address {
+    font-size: 32px;
+    margin: 0;
+  }
 }

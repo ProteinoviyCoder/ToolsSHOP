@@ -15,3 +15,9 @@
   display: flex;
   align-items: center;
 }
+
+@media (max-width: 1000px) {
+  .link1 {
+    display: none !important;
+  }
+}

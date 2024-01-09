@@ -127,6 +127,16 @@ input[type="number"]::-webkit-outer-spin-button {
   color: rgb(42, 113, 253);
 }
 
+.text-info {
+  text-align: center;
+  color: white;
+  font-weight: 700;
+  background-color: gray;
+  padding: 7px;
+  border-radius: 15px;
+  box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.7);
+}
+
 .disable {
   background-color: rgb(79, 79, 79);
   color: white;
@@ -136,4 +146,31 @@ input[type="number"]::-webkit-outer-spin-button {
   color: white;
   box-shadow: 0 0 5px 5px rgba(79, 79, 79, 0);
   cursor: default;
+}
+
+@media (max-width: 1000px) {
+  .order__img-form-block {
+    position: relative;
+    width: 380px;
+  }
+}
+@media (max-width: 390px) {
+  .order__img-form-block {
+    position: relative;
+    width: 340px;
+  }
+}
+
+@media (max-width: 345px) {
+  .order__img-form-block {
+    position: relative;
+    width: 310px;
+  }
+}
+
+@media (max-width: 315px) {
+  .order__img-form-block {
+    position: relative;
+    width: 260px;
+  }
 }

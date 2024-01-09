@@ -32,6 +32,7 @@ export function getCategories() {
         } else {
           router.navigate(`/catalog/${textENG}`);
         }
+        window.scrollTo(0, 0);
       }
     });
 
@@ -42,21 +43,13 @@ export function getCategories() {
   createItemCategories("Пилы электрические", "pila-electro");
   createItemCategories("Пылесосы строительные", "stroy-pilesos");
   createItemCategories("Шлифовальные машины", "shlif-mash");
-  createItemCategories("Миксеры строительные", "stroy-mixer");
-  createItemCategories("Электролобзики", "lobziki-electro");
   createItemCategories("Дрели и шуруповерты", "dreli-shrupoverti");
   createItemCategories("Фрезеры", "frezeri");
   createItemCategories("Столярные инструменты", "stolyirnie-instrumenti");
-  createItemCategories("Болгарки (УШМ)", "bolgarki");
   createItemCategories("Пояса, ремни, сумки", "remni");
-  createItemCategories("Пилы и лобзики", "pila-lobziki");
   createItemCategories("Зарядные устройства и аккумуляторы", "zaryidki-akb");
-  createItemCategories("Пистолеты монтажные", "montazh-pistol");
-  createItemCategories("Перфораторы", "perforator");
-  createItemCategories("Фены строительные", "stroy-fen");
   createItemCategories("Станки", "stanok");
   createItemCategories("Лазерные уровни и нивелиры", "lazer-uroven-niveliri");
-  createItemCategories("Отбойные молотки", "otboyni-molotki");
   createItemCategories("Другое", "drugoe");
 
   contentCategories.append(titleCategories, listCategories);

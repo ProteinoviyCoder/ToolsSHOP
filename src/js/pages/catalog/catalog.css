@@ -1,3 +1,7 @@
+.catalog-page {
+  display: flex;
+}
+
 .div-for__title__product-list {
   width: 100%;
 }
@@ -14,4 +18,22 @@
 
 .catalog__none {
   display: none !important;
+}
+
+@media (max-width: 1000px) {
+  .catalog-page {
+    display: flex;
+    flex-direction: column;
+  }
+  .catalog__main-title {
+    display: none;
+  }
+  .div-search-main-title {
+    margin-top: 20px;
+    margin-bottom: 5px;
+  }
+  .catalog__search {
+    width: 95%;
+    font-size: 20px;
+  }
 }

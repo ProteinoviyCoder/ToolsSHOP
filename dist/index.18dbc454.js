@@ -1188,6 +1188,7 @@ function getHeader() {
     const nav = document.createElement("nav");
     nav.classList.add("header__navigation");
     let link1 = (0, _navigationLinkJs.getNavigationLink)("/", "\u0413\u043B\u0430\u0432\u043D\u0430\u044F \u0441\u0442\u0440\u0430\u043D\u0438\u0446\u0430");
+    link1.classList.add("link1");
     let link2 = (0, _navigationLinkJs.getNavigationLink)("/catalog", "\u041A\u0430\u0442\u0430\u043B\u043E\u0433");
     nav.append(link1, link2);
     container.append(logo, nav, basketBtn);

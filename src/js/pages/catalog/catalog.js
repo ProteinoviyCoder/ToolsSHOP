@@ -18,6 +18,7 @@ export function getCatalogPage(categoryNavigo) {
 
   //создаём заголовок
   const mainTitle = getMainTitle("Каталог");
+  mainTitle.classList.add("catalog__main-title");
   //создаём поиск
   const search = getSearch();
   search.classList.add("catalog__search");

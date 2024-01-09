@@ -595,6 +595,7 @@ function getCatalogPage(categoryNavigo) {
     divForTitleProductList.classList.add("div-for__title__product-list");
     //создаём заголовок
     const mainTitle = (0, _mainTitleJs.getMainTitle)("\u041A\u0430\u0442\u0430\u043B\u043E\u0433");
+    mainTitle.classList.add("catalog__main-title");
     //создаём поиск
     const search = (0, _searchJs.getSearch)();
     search.classList.add("catalog__search");
@@ -693,6 +694,7 @@ function getCategories() {
             if (event.target.classList.contains("item-categories")) {
                 if (textENG === "" || textENG === undefined) (0, _mainJs.router).navigate(`/catalog`);
                 else (0, _mainJs.router).navigate(`/catalog/${textENG}`);
+                window.scrollTo(0, 0);
             }
         });
         listCategories.append(itemCategories);
@@ -701,21 +703,13 @@ function getCategories() {
     createItemCategories("\u041F\u0438\u043B\u044B \u044D\u043B\u0435\u043A\u0442\u0440\u0438\u0447\u0435\u0441\u043A\u0438\u0435", "pila-electro");
     createItemCategories("\u041F\u044B\u043B\u0435\u0441\u043E\u0441\u044B \u0441\u0442\u0440\u043E\u0438\u0442\u0435\u043B\u044C\u043D\u044B\u0435", "stroy-pilesos");
     createItemCategories("\u0428\u043B\u0438\u0444\u043E\u0432\u0430\u043B\u044C\u043D\u044B\u0435 \u043C\u0430\u0448\u0438\u043D\u044B", "shlif-mash");
-    createItemCategories("\u041C\u0438\u043A\u0441\u0435\u0440\u044B \u0441\u0442\u0440\u043E\u0438\u0442\u0435\u043B\u044C\u043D\u044B\u0435", "stroy-mixer");
-    createItemCategories("\u042D\u043B\u0435\u043A\u0442\u0440\u043E\u043B\u043E\u0431\u0437\u0438\u043A\u0438", "lobziki-electro");
     createItemCategories("\u0414\u0440\u0435\u043B\u0438 \u0438 \u0448\u0443\u0440\u0443\u043F\u043E\u0432\u0435\u0440\u0442\u044B", "dreli-shrupoverti");
     createItemCategories("\u0424\u0440\u0435\u0437\u0435\u0440\u044B", "frezeri");
     createItemCategories("\u0421\u0442\u043E\u043B\u044F\u0440\u043D\u044B\u0435 \u0438\u043D\u0441\u0442\u0440\u0443\u043C\u0435\u043D\u0442\u044B", "stolyirnie-instrumenti");
-    createItemCategories("\u0411\u043E\u043B\u0433\u0430\u0440\u043A\u0438 (\u0423\u0428\u041C)", "bolgarki");
     createItemCategories("\u041F\u043E\u044F\u0441\u0430, \u0440\u0435\u043C\u043D\u0438, \u0441\u0443\u043C\u043A\u0438", "remni");
-    createItemCategories("\u041F\u0438\u043B\u044B \u0438 \u043B\u043E\u0431\u0437\u0438\u043A\u0438", "pila-lobziki");
     createItemCategories("\u0417\u0430\u0440\u044F\u0434\u043D\u044B\u0435 \u0443\u0441\u0442\u0440\u043E\u0439\u0441\u0442\u0432\u0430 \u0438 \u0430\u043A\u043A\u0443\u043C\u0443\u043B\u044F\u0442\u043E\u0440\u044B", "zaryidki-akb");
-    createItemCategories("\u041F\u0438\u0441\u0442\u043E\u043B\u0435\u0442\u044B \u043C\u043E\u043D\u0442\u0430\u0436\u043D\u044B\u0435", "montazh-pistol");
-    createItemCategories("\u041F\u0435\u0440\u0444\u043E\u0440\u0430\u0442\u043E\u0440\u044B", "perforator");
-    createItemCategories("\u0424\u0435\u043D\u044B \u0441\u0442\u0440\u043E\u0438\u0442\u0435\u043B\u044C\u043D\u044B\u0435", "stroy-fen");
     createItemCategories("\u0421\u0442\u0430\u043D\u043A\u0438", "stanok");
     createItemCategories("\u041B\u0430\u0437\u0435\u0440\u043D\u044B\u0435 \u0443\u0440\u043E\u0432\u043D\u0438 \u0438 \u043D\u0438\u0432\u0435\u043B\u0438\u0440\u044B", "lazer-uroven-niveliri");
-    createItemCategories("\u041E\u0442\u0431\u043E\u0439\u043D\u044B\u0435 \u043C\u043E\u043B\u043E\u0442\u043A\u0438", "otboyni-molotki");
     createItemCategories("\u0414\u0440\u0443\u0433\u043E\u0435", "drugoe");
     contentCategories.append(titleCategories, listCategories);
     categoriesModule.append(contentCategories);

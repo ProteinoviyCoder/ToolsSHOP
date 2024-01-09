@@ -13,7 +13,7 @@ import avitoImg from "/src/assets/img/avito.jpeg";
 import ozonImg from "/src/assets/img/ozon.jpg";
 import sberImg from "/src/assets/img/sber.jpg";
 import yandexImg from "/src/assets/img/yandex.jpg";
-import addressImg from "/src/assets/img/address.jpeg";
+import addressImg from "/src/assets/img/address.jpg";
 import { getMainTitle } from "/src/js/components/mainTitle/mainTitle.js";
 import { getSemiTitle } from "/src/js/components/semiTitle/semiTitle.js";
 import { getSlider } from "/src/js/components/slider/slider.js";
@@ -147,7 +147,7 @@ export function getMainPage() {
   createItemTeamList(
     `Более 100 продаж и довольных клиентов ежедневно по всей России`
   );
-  createItemTeamList(`Доверительное отношение с к лиентами - залог нашего успеха. 
+  createItemTeamList(`Доверительное отношение с клиентами - залог нашего успеха. 
   У нас есть постоянные клиенты, а так же большое количество положительных отзывов с разных площадок`);
 
   containerContent3.append(imgHands, aboutTeam);
@@ -168,18 +168,24 @@ export function getMainPage() {
     titleFeedback.textContent = feedTitle;
 
     starTitle.append(titleFeedback);
+
+    const divStar = document.createElement("div");
+    divStar.classList.add("div-star");
+
     function createStarImg() {
       const star = document.createElement("img");
       star.classList.add("main__star-img");
       star.src = litleStar;
 
-      starTitle.append(star);
+      divStar.append(star);
     }
     createStarImg();
     createStarImg();
     createStarImg();
     createStarImg();
     createStarImg();
+
+    starTitle.append(divStar);
 
     const textFeedback = document.createElement("p");
     textFeedback.classList.add("main__text-feedback");
@@ -259,19 +265,10 @@ export function getMainPage() {
     listMarketplace.append(itemMarketPlace);
   }
 
-  // createItemMarketplace(
-  //   "https://www.avito.ru/brands/planet/all?gdlkerfdnwq=101&shopId=1783655&iid=2169891718&page_from=from_item_header&sellerId=099ce0f52a772327cc365967495a884c",
-  //   avitoImg
-  // );
-  createItemMarketplace(
-    "https://www.ozon.ru/seller/apara-1009443/products/?miniapp=seller_1009443",
-    ozonImg
-  );
-  createItemMarketplace("https://megamarket.ru/shop/tvoy-instrument/", sberImg);
-  // createItemMarketplace(
-  //   "https://market.yandex.ru/business--tvoi-instrument/7717514",
-  //   yandexImg
-  // );
+  createItemMarketplace("https://www.avito.ru/", avitoImg);
+  createItemMarketplace("https://www.ozon.ru/", ozonImg);
+  createItemMarketplace("https://megamarket.ru/", sberImg);
+  createItemMarketplace("https://market.yandex.ru/", yandexImg);
 
   const hr2 = document.createElement("hr");
   hr2.classList.add("main__hr");
@@ -286,9 +283,9 @@ export function getMainPage() {
     "main-elements-left",
     "main-elements"
   );
-  linkAddress.textContent = "Варшавское шоссе 145к7";
+  linkAddress.textContent = "Москва, Москва";
   linkAddress.href =
-    "https://yandex.ru/maps/213/moscow/house/varshavskoye_shosse_145k7/Z04YcAdiQUcFQFtvfXl2eH9jYw==/?ll=37.602822%2C55.579307&z=17";
+    "https://yandex.ru/maps/geo/moskva/53000094/?ll=37.385439%2C55.584227&z=9.5";
   linkAddress.target = "_blank";
 
   const imgAddress = document.createElement("img");
@@ -298,6 +295,12 @@ export function getMainPage() {
     "main-elements"
   );
   imgAddress.src = addressImg;
+  imgAddress.addEventListener("click", function () {
+    window.open(
+      "https://yandex.ru/maps/geo/moskva/53000094/?ll=37.385439%2C55.584227&z=9.5",
+      "_blank"
+    );
+  });
 
   contentAddress.append(linkAddress, imgAddress);
 
@@ -333,6 +336,10 @@ export function getMainPage() {
       titleItemQuestions.classList.toggle(
         "main__content-title-questions-active"
       );
+      window.scrollTo({
+        top: 100000,
+        left: 0,
+      });
     });
 
     const contentTitleQuestions = document.createElement("div");
@@ -363,8 +370,7 @@ export function getMainPage() {
   );
   createItemQuestions(
     `Можно ли приехать посмотреть?`,
-    `Да, Вы можете приехать по адресу "Варшавское шоссе 145к7", там находится наш склад. 
-    Вы можете зайти, посмотреть весь ассортимент, потрогать, проверить работоспособность.`
+    `Да, Вы можете приехать к нам, посмотреть весь ассортимент, проверить работоспособность.`
   );
 
   containerContent6.append(titleQuestions, listQuestions);

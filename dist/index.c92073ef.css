@@ -53,10 +53,6 @@ body {
   display: none;
 }
 
-.catalog-page {
-  display: flex;
-}
-
 .active-header-link {
   border-bottom: 5px solid #3e7eff;
 }

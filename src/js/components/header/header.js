@@ -18,6 +18,7 @@ export function getHeader() {
   nav.classList.add("header__navigation");
 
   let link1 = getNavigationLink("/", "Главная страница");
+  link1.classList.add("link1");
   let link2 = getNavigationLink("/catalog", "Каталог");
 
   nav.append(link1, link2);

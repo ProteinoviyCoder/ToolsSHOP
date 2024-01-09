@@ -608,8 +608,8 @@ var _sberJpg = require("/src/assets/img/sber.jpg");
 var _sberJpgDefault = parcelHelpers.interopDefault(_sberJpg);
 var _yandexJpg = require("/src/assets/img/yandex.jpg");
 var _yandexJpgDefault = parcelHelpers.interopDefault(_yandexJpg);
-var _addressJpeg = require("/src/assets/img/address.jpeg");
-var _addressJpegDefault = parcelHelpers.interopDefault(_addressJpeg);
+var _addressJpg = require("/src/assets/img/address.jpg");
+var _addressJpgDefault = parcelHelpers.interopDefault(_addressJpg);
 var _mainTitleJs = require("/src/js/components/mainTitle/mainTitle.js");
 var _semiTitleJs = require("/src/js/components/semiTitle/semiTitle.js");
 var _sliderJs = require("/src/js/components/slider/slider.js");
@@ -691,7 +691,7 @@ function getMainPage() {
     }
     createItemTeamList(`\u{41A}\u{43E}\u{43C}\u{430}\u{43D}\u{434}\u{430} \u{431}\u{43E}\u{43B}\u{435}\u{435} \u{447}\u{435}\u{43C} \u{438}\u{437} 10 \u{447}\u{435}\u{43B}\u{43E}\u{432}\u{435}\u{43A} \u{435}\u{436}\u{435}\u{434}\u{43D}\u{435}\u{432}\u{43D}\u{43E} \u{442}\u{440}\u{443}\u{434}\u{438}\u{442}\u{441}\u{44F}, \u{447}\u{442}\u{43E}\u{431}\u{44B} \u{43F}\u{440}\u{435}\u{434}\u{43E}\u{441}\u{442}\u{430}\u{432}\u{438}\u{442}\u{44C} \u{412}\u{430}\u{43C} \u{43B}\u{443}\u{447}\u{448}\u{438}\u{439} \u{441}\u{435}\u{440}\u{432}\u{438}\u{441} \u{438} \u{43E}\u{43F}\u{442}\u{438}\u{43C}\u{430}\u{43B}\u{44C}\u{43D}\u{44B}\u{435} \u{446}\u{435}\u{43D}\u{44B}`);
     createItemTeamList(`\u{411}\u{43E}\u{43B}\u{435}\u{435} 100 \u{43F}\u{440}\u{43E}\u{434}\u{430}\u{436} \u{438} \u{434}\u{43E}\u{432}\u{43E}\u{43B}\u{44C}\u{43D}\u{44B}\u{445} \u{43A}\u{43B}\u{438}\u{435}\u{43D}\u{442}\u{43E}\u{432} \u{435}\u{436}\u{435}\u{434}\u{43D}\u{435}\u{432}\u{43D}\u{43E} \u{43F}\u{43E} \u{432}\u{441}\u{435}\u{439} \u{420}\u{43E}\u{441}\u{441}\u{438}\u{438}`);
-    createItemTeamList(`\u{414}\u{43E}\u{432}\u{435}\u{440}\u{438}\u{442}\u{435}\u{43B}\u{44C}\u{43D}\u{43E}\u{435} \u{43E}\u{442}\u{43D}\u{43E}\u{448}\u{435}\u{43D}\u{438}\u{435} \u{441} \u{43A} \u{43B}\u{438}\u{435}\u{43D}\u{442}\u{430}\u{43C}\u{438} - \u{437}\u{430}\u{43B}\u{43E}\u{433} \u{43D}\u{430}\u{448}\u{435}\u{433}\u{43E} \u{443}\u{441}\u{43F}\u{435}\u{445}\u{430}. 
+    createItemTeamList(`\u{414}\u{43E}\u{432}\u{435}\u{440}\u{438}\u{442}\u{435}\u{43B}\u{44C}\u{43D}\u{43E}\u{435} \u{43E}\u{442}\u{43D}\u{43E}\u{448}\u{435}\u{43D}\u{438}\u{435} \u{441} \u{43A}\u{43B}\u{438}\u{435}\u{43D}\u{442}\u{430}\u{43C}\u{438} - \u{437}\u{430}\u{43B}\u{43E}\u{433} \u{43D}\u{430}\u{448}\u{435}\u{433}\u{43E} \u{443}\u{441}\u{43F}\u{435}\u{445}\u{430}. 
   \u{423} \u{43D}\u{430}\u{441} \u{435}\u{441}\u{442}\u{44C} \u{43F}\u{43E}\u{441}\u{442}\u{43E}\u{44F}\u{43D}\u{43D}\u{44B}\u{435} \u{43A}\u{43B}\u{438}\u{435}\u{43D}\u{442}\u{44B}, \u{430} \u{442}\u{430}\u{43A} \u{436}\u{435} \u{431}\u{43E}\u{43B}\u{44C}\u{448}\u{43E}\u{435} \u{43A}\u{43E}\u{43B}\u{438}\u{447}\u{435}\u{441}\u{442}\u{432}\u{43E} \u{43F}\u{43E}\u{43B}\u{43E}\u{436}\u{438}\u{442}\u{435}\u{43B}\u{44C}\u{43D}\u{44B}\u{445} \u{43E}\u{442}\u{437}\u{44B}\u{432}\u{43E}\u{432} \u{441} \u{440}\u{430}\u{437}\u{43D}\u{44B}\u{445} \u{43F}\u{43B}\u{43E}\u{449}\u{430}\u{434}\u{43E}\u{43A}`);
     containerContent3.append(imgHands, aboutTeam);
     // ---------------------Отдел №4 ОТЗЫВЫ---------------------
@@ -706,17 +706,20 @@ function getMainPage() {
         titleFeedback.classList.add("main__teitle-feedback");
         titleFeedback.textContent = feedTitle;
         starTitle.append(titleFeedback);
+        const divStar = document.createElement("div");
+        divStar.classList.add("div-star");
         function createStarImg() {
             const star = document.createElement("img");
             star.classList.add("main__star-img");
             star.src = (0, _litleStarPngDefault.default);
-            starTitle.append(star);
+            divStar.append(star);
         }
         createStarImg();
         createStarImg();
         createStarImg();
         createStarImg();
         createStarImg();
+        starTitle.append(divStar);
         const textFeedback = document.createElement("p");
         textFeedback.classList.add("main__text-feedback");
         textFeedback.textContent = feedText;
@@ -757,16 +760,10 @@ function getMainPage() {
         itemMarketPlace.append(linkMarketplace);
         listMarketplace.append(itemMarketPlace);
     }
-    // createItemMarketplace(
-    //   "https://www.avito.ru/brands/planet/all?gdlkerfdnwq=101&shopId=1783655&iid=2169891718&page_from=from_item_header&sellerId=099ce0f52a772327cc365967495a884c",
-    //   avitoImg
-    // );
-    createItemMarketplace("https://www.ozon.ru/seller/apara-1009443/products/?miniapp=seller_1009443", (0, _ozonJpgDefault.default));
-    createItemMarketplace("https://megamarket.ru/shop/tvoy-instrument/", (0, _sberJpgDefault.default));
-    // createItemMarketplace(
-    //   "https://market.yandex.ru/business--tvoi-instrument/7717514",
-    //   yandexImg
-    // );
+    createItemMarketplace("https://www.avito.ru/", (0, _avitoJpegDefault.default));
+    createItemMarketplace("https://www.ozon.ru/", (0, _ozonJpgDefault.default));
+    createItemMarketplace("https://megamarket.ru/", (0, _sberJpgDefault.default));
+    createItemMarketplace("https://market.yandex.ru/", (0, _yandexJpgDefault.default));
     const hr2 = document.createElement("hr");
     hr2.classList.add("main__hr");
     //ФИЗ АДРЕС
@@ -774,12 +771,15 @@ function getMainPage() {
     contentAddress.classList.add("main__content-addres");
     const linkAddress = document.createElement("a");
     linkAddress.classList.add("main__name-address", "main-elements-left", "main-elements");
-    linkAddress.textContent = "\u0412\u0430\u0440\u0448\u0430\u0432\u0441\u043A\u043E\u0435 \u0448\u043E\u0441\u0441\u0435 145\u043A7";
-    linkAddress.href = "https://yandex.ru/maps/213/moscow/house/varshavskoye_shosse_145k7/Z04YcAdiQUcFQFtvfXl2eH9jYw==/?ll=37.602822%2C55.579307&z=17";
+    linkAddress.textContent = "\u041C\u043E\u0441\u043A\u0432\u0430, \u041C\u043E\u0441\u043A\u0432\u0430";
+    linkAddress.href = "https://yandex.ru/maps/geo/moskva/53000094/?ll=37.385439%2C55.584227&z=9.5";
     linkAddress.target = "_blank";
     const imgAddress = document.createElement("img");
     imgAddress.classList.add("main__img-address", "main-elements-right", "main-elements");
-    imgAddress.src = (0, _addressJpegDefault.default);
+    imgAddress.src = (0, _addressJpgDefault.default);
+    imgAddress.addEventListener("click", function() {
+        window.open("https://yandex.ru/maps/geo/moskva/53000094/?ll=37.385439%2C55.584227&z=9.5", "_blank");
+    });
     contentAddress.append(linkAddress, imgAddress);
     const hr3 = document.createElement("hr");
     hr3.classList.add("main__hr");
@@ -800,6 +800,10 @@ function getMainPage() {
             arrowDown.classList.toggle("main__arrow-up");
             itemQuestions.classList.toggle("main__item-questions-active");
             titleItemQuestions.classList.toggle("main__content-title-questions-active");
+            window.scrollTo({
+                top: 100000,
+                left: 0
+            });
         });
         const contentTitleQuestions = document.createElement("div");
         contentTitleQuestions.classList.add("main__content-title-questions");
@@ -817,8 +821,7 @@ function getMainPage() {
         listQuestions.append(itemQuestions);
     }
     createItemQuestions(`\u{423} \u{412}\u{430}\u{441} \u{43E}\u{440}\u{438}\u{433}\u{438}\u{43D}\u{430}\u{43B}\u{44C}\u{43D}\u{44B}\u{439} \u{438}\u{43D}\u{441}\u{442}\u{440}\u{443}\u{43C}\u{435}\u{43D}\u{442}?`, `\u{414}\u{430}, \u{443} \u{43D}\u{430}\u{441} \u{43F}\u{43E}\u{43B}\u{43D}\u{43E}\u{441}\u{442}\u{44C}\u{44E} \u{43E}\u{440}\u{438}\u{433}\u{438}\u{43D}\u{430}\u{43B}\u{44C}\u{43D}\u{44B}\u{439} \u{438}\u{43D}\u{441}\u{442}\u{440}\u{443}\u{43C}\u{435}\u{43D}\u{442}!`);
-    createItemQuestions(`\u{41C}\u{43E}\u{436}\u{43D}\u{43E} \u{43B}\u{438} \u{43F}\u{440}\u{438}\u{435}\u{445}\u{430}\u{442}\u{44C} \u{43F}\u{43E}\u{441}\u{43C}\u{43E}\u{442}\u{440}\u{435}\u{442}\u{44C}?`, `\u{414}\u{430}, \u{412}\u{44B} \u{43C}\u{43E}\u{436}\u{435}\u{442}\u{435} \u{43F}\u{440}\u{438}\u{435}\u{445}\u{430}\u{442}\u{44C} \u{43F}\u{43E} \u{430}\u{434}\u{440}\u{435}\u{441}\u{443} "\u{412}\u{430}\u{440}\u{448}\u{430}\u{432}\u{441}\u{43A}\u{43E}\u{435} \u{448}\u{43E}\u{441}\u{441}\u{435} 145\u{43A}7", \u{442}\u{430}\u{43C} \u{43D}\u{430}\u{445}\u{43E}\u{434}\u{438}\u{442}\u{441}\u{44F} \u{43D}\u{430}\u{448} \u{441}\u{43A}\u{43B}\u{430}\u{434}. 
-    \u{412}\u{44B} \u{43C}\u{43E}\u{436}\u{435}\u{442}\u{435} \u{437}\u{430}\u{439}\u{442}\u{438}, \u{43F}\u{43E}\u{441}\u{43C}\u{43E}\u{442}\u{440}\u{435}\u{442}\u{44C} \u{432}\u{435}\u{441}\u{44C} \u{430}\u{441}\u{441}\u{43E}\u{440}\u{442}\u{438}\u{43C}\u{435}\u{43D}\u{442}, \u{43F}\u{43E}\u{442}\u{440}\u{43E}\u{433}\u{430}\u{442}\u{44C}, \u{43F}\u{440}\u{43E}\u{432}\u{435}\u{440}\u{438}\u{442}\u{44C} \u{440}\u{430}\u{431}\u{43E}\u{442}\u{43E}\u{441}\u{43F}\u{43E}\u{441}\u{43E}\u{431}\u{43D}\u{43E}\u{441}\u{442}\u{44C}.`);
+    createItemQuestions(`\u{41C}\u{43E}\u{436}\u{43D}\u{43E} \u{43B}\u{438} \u{43F}\u{440}\u{438}\u{435}\u{445}\u{430}\u{442}\u{44C} \u{43F}\u{43E}\u{441}\u{43C}\u{43E}\u{442}\u{440}\u{435}\u{442}\u{44C}?`, `\u{414}\u{430}, \u{412}\u{44B} \u{43C}\u{43E}\u{436}\u{435}\u{442}\u{435} \u{43F}\u{440}\u{438}\u{435}\u{445}\u{430}\u{442}\u{44C} \u{43A} \u{43D}\u{430}\u{43C}, \u{43F}\u{43E}\u{441}\u{43C}\u{43E}\u{442}\u{440}\u{435}\u{442}\u{44C} \u{432}\u{435}\u{441}\u{44C} \u{430}\u{441}\u{441}\u{43E}\u{440}\u{442}\u{438}\u{43C}\u{435}\u{43D}\u{442}, \u{43F}\u{440}\u{43E}\u{432}\u{435}\u{440}\u{438}\u{442}\u{44C} \u{440}\u{430}\u{431}\u{43E}\u{442}\u{43E}\u{441}\u{43F}\u{43E}\u{441}\u{43E}\u{431}\u{43D}\u{43E}\u{441}\u{442}\u{44C}.`);
     containerContent6.append(titleQuestions, listQuestions);
     page.append(containerContent1, containerContent2, containerContent3, containerContent4, containerContent5, containerContent6);
     setTimeout(function() {
@@ -842,7 +845,7 @@ function getMainPage() {
     return page;
 }
 
-},{"/src/js/pages/main/main.css":"eR2fh","/src/assets/img/logo.png":"akRM1","/src/assets/img/dewalt.png":"6iRsS","/src/assets/img/makita.png":"7XT6Z","/src/assets/img/metabo.png":"hmxyr","/src/assets/img/karcher.png":"4HOFe","/src/assets/img/bosch.png":"hyFy1","/src/assets/img/festool.png":"ckfuM","/src/assets/img/milwaukee.png":"htq6z","/src/assets/img/hands.jpg":"9TvhF","/src/assets/img/litleStar.png":"crZmj","/src/assets/img/avito.jpeg":"bAvvr","/src/assets/img/ozon.jpg":"dGNHn","/src/assets/img/sber.jpg":"kKILK","/src/assets/img/yandex.jpg":"c72TP","/src/assets/img/address.jpeg":"7isi8","/src/js/components/mainTitle/mainTitle.js":"ki5if","/src/js/components/semiTitle/semiTitle.js":"5vYXl","/src/js/components/slider/slider.js":"awVQX","/src/assets/text/text.js":"iBFKL","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"eR2fh":[function() {},{}],"akRM1":[function(require,module,exports) {
+},{"/src/js/pages/main/main.css":"eR2fh","/src/assets/img/logo.png":"akRM1","/src/assets/img/dewalt.png":"6iRsS","/src/assets/img/makita.png":"7XT6Z","/src/assets/img/metabo.png":"hmxyr","/src/assets/img/karcher.png":"4HOFe","/src/assets/img/bosch.png":"hyFy1","/src/assets/img/festool.png":"ckfuM","/src/assets/img/milwaukee.png":"htq6z","/src/assets/img/hands.jpg":"9TvhF","/src/assets/img/litleStar.png":"crZmj","/src/assets/img/avito.jpeg":"bAvvr","/src/assets/img/ozon.jpg":"dGNHn","/src/assets/img/sber.jpg":"kKILK","/src/assets/img/yandex.jpg":"c72TP","/src/assets/img/address.jpg":"dYRUX","/src/js/components/mainTitle/mainTitle.js":"ki5if","/src/js/components/semiTitle/semiTitle.js":"5vYXl","/src/js/components/slider/slider.js":"awVQX","/src/assets/text/text.js":"iBFKL","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"eR2fh":[function() {},{}],"akRM1":[function(require,module,exports) {
 module.exports = require("7c856cbf92430d06").getBundleURL("7a7kP") + "logo.7c849107.png" + "?" + Date.now();
 
 },{"7c856cbf92430d06":"lgJ39"}],"6iRsS":[function(require,module,exports) {
@@ -884,10 +887,10 @@ module.exports = require("48f771a19c01c1b0").getBundleURL("7a7kP") + "sber.1da97
 },{"48f771a19c01c1b0":"lgJ39"}],"c72TP":[function(require,module,exports) {
 module.exports = require("13f910a10e1e6b59").getBundleURL("7a7kP") + "yandex.b83f39bd.jpg" + "?" + Date.now();
 
-},{"13f910a10e1e6b59":"lgJ39"}],"7isi8":[function(require,module,exports) {
-module.exports = require("807e93b4747922b1").getBundleURL("7a7kP") + "address.6d359a6a.jpeg" + "?" + Date.now();
+},{"13f910a10e1e6b59":"lgJ39"}],"dYRUX":[function(require,module,exports) {
+module.exports = require("45b1dae94daabd93").getBundleURL("7a7kP") + "address.1e7a523a.jpg" + "?" + Date.now();
 
-},{"807e93b4747922b1":"lgJ39"}],"ki5if":[function(require,module,exports) {
+},{"45b1dae94daabd93":"lgJ39"}],"ki5if":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 // Создаёт главный заголовок

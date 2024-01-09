@@ -24,34 +24,6 @@ export function getOrderPage() {
 
   const formOrder = document.createElement("form");
   formOrder.classList.add("order__form-order");
-  formOrder.addEventListener("submit", async function (event) {
-    event.preventDefault();
-
-    const products = formOrder.querySelectorAll(".order__product");
-    let productString;
-    for (let i of products) {
-      productString += `${i.textContent} \n`;
-    }
-
-    if (inputName.value != "" || inputPhone.value != "") {
-      const url = new URL("http://localhost:3700/telega");
-      const sendMsg = await fetch(url, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          name: inputName.value.toString(),
-          phone: inputPhone.value.toString(),
-          products: productString,
-        }),
-      });
-      if (!sendMsg.status == 200) {
-        console.log(sendMsg);
-      }
-    }
-    // console.log(JSON.stringify(inputName.value));
-  });
 
   //div для inputName и его имени
   const contentInputName = document.createElement("div");
@@ -155,7 +127,18 @@ export function getOrderPage() {
     submit.classList.remove("disable");
   }
 
-  formOrder.append(contentInputName, contentInputPhone, placeProducts, submit);
+  const textInfo = document.createElement("p");
+  textInfo.classList.add("text-info");
+  textInfo.textContent =
+    "Это образец формы, ваши данные не собираются и не сохраняются";
+
+  formOrder.append(
+    contentInputName,
+    contentInputPhone,
+    placeProducts,
+    submit,
+    textInfo
+  );
 
   imgFormBlock.append(btnBack, imgForm, formOrder);
 
